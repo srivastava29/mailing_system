@@ -1,0 +1,43 @@
+.formcontainer
+{
+
+display:flex;
+}
+.container
+{
+display:block;
+}
+
+ input[type=text]:focus {
+		opacity: 0.5;
+}
+input[type=text]
+{
+width: 99%;
+      padding: 16px 8px;
+      margin: 8px 0;
+    }
+textarea
+{
+width: 100%;
+
+}
+button {
+      background-color: #4286f4;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: grab;
+      width:10%
+      }
+body
+{
+background-color:#CCFFCC;
+}
+label
+{
+float:left;
+width: 10em;
+margin-right: 1em;
+}
