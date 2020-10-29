@@ -1,41 +1,38 @@
 //load inbox
+
 $(document).ready(function() {
+var fname=localStorage.getItem("fname");
+document.getElementById('hi').innerHTML= "Hi"+" "+fname;
+var composeWindow;
    $('#inbox').click(function() {
-      $("#content_container").load("./inbox.html", function(responseTxt, statusTxt, xhr){
-    if(statusTxt == "success")
-      console.log("External content loaded successfully!");
-    if(statusTxt == "error")
-      console.log("Error: " + xhr.status + ": " + xhr.statusText);
+      clear_inbox();
   });
-});
-});
 //open compose window
-$(document).ready(function() {
-   $('#compose').click(function() {
-  
-      window.open("./compose.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=900px,height=900px");
+$('#compose').click(function() {
+		
+      set_from();
+	  $("#preview_container").empty();
+	  
 	  
   });
-});
-//load draft
-$(document).ready(function() {
-   $('#draft').click(function() {
-      $("#content_container").load("./draft.html", function(responseTxt, statusTxt, xhr){
+ //load draft 
+ $('#draft').click(function() {
+ clear('draft');
+      /*$("#content_container").load("./draft.html", function(responseTxt, statusTxt, xhr){
     if(statusTxt == "success")
       console.log("External content loaded successfully!");
     if(statusTxt == "error")
-      console.log("Error: " + xhr.status + ": " + xhr.statusText);
+      console.log("Error: " + xhr.status + ": " + xhr.statusText);*/
   });
-});
-});
 //load sent mails
-$(document).ready(function() {
-   $('#sent').click(function() {
-      $("#content_container").load("./sent.html", function(responseTxt, statusTxt, xhr){
-    if(statusTxt == "success")
-      console.log("External content loaded successfully!");
-    if(statusTxt == "error")
-      console.log("Error: " + xhr.status + ": " + xhr.statusText);
-  });
+$('#sent').click(function() {
+  clear('sent');
 });
+$('#logout').click(function() {
+ firebase.auth().signOut().then(function() {
+  window.location.replace('/login/login.html');
+}, function(error) {
+  console.log(error);
+});
+  });
 });

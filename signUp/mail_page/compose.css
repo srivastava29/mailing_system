@@ -11,7 +11,7 @@ display:block;
  input[type=text]:focus {
 		opacity: 0.5;
 }
-input[type=text]
+input[type=text],input[type=email]
 {
 width: 99%;
       padding: 16px 8px;

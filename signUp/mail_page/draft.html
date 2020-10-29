@@ -2,29 +2,29 @@
 <html>
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-5"/> 
-<script src ="./draft.js"></script>
+
 <link href="./compose.css" rel="stylesheet">
 </head>
 <body>
+
+<form name="myForm" id ="formid_draft" >
 <div id="btn">
-<button onClick="">Send</button>
-<button onClick="edit()" id="savebtn">Edit</button>
-
+<button onClick="send_draft(this.form,this.id)" id="sendbtn">Send</button>
+<button onClick="edit()" >Edit</button>
+<button onClick="save_draftnow()" >Save</button
 </div>
-<form name="myForm" id ="formid">
-
 
 <div class="formcontainer">
 
 <div class="container">
 
-<label><strong>To</strong></label> <input type="text" name="fname" id="fname" />
-<label> <strong>From </strong></label> <input type="text" name="lname" id="lname" />
-<label><strong>CC</strong></label> <input type="text" name="email" id="email"  />
-<label><strong>BCC</strong></label>
-<input type="text" name="bcc"/>
+<label><strong>To</strong></label> <input type="email" name="to" id="to" disabled />
+<label> <strong>From </strong></label> <input type="email" name="from" id="from" disabled readonly />
+<label><strong>CC</strong></label> <input type="email" name="cc" id="cc" disabled />
+<label><strong>Subject</strong></label>
+<input type="text" name="sub_3" id="sub" disabled  />
 <label></label>
-<textarea id="txtarea" name="txt_" rows="25" cols="100" disabled>
+<textarea id="txt_area" name="txt_3" rows="25" cols="100" disabled>
 
 </textarea>
 
@@ -34,5 +34,10 @@
 </div>
 
 </form>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase.js"></script>
+<script src ="/initialize_fb.js"></script>
+<script src ="./draft.js"></script>
+<script src ="./compose.js"></script>
+<script src ="./inbox.js"></script>
 </body>
 </html>

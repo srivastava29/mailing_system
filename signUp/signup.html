@@ -14,17 +14,17 @@
 <div id="toast"> </div>
 <div class="container">
 <label><strong>First Name</strong> </label>
-<input type="text" name="fname" id="fname" placeholder="First Name"/>
+<input type="text" name="fname" id="fname" placeholder="First Name" required/>
 <label> <strong>Last Name </strong></label>
-<input type="text" name="lname" id="lname" placeholder="Last Name"/>
+<input type="text" name="lname" id="lname" placeholder="Last Name" required/>
 <label> <strong>Email address </strong></label>
-<input type="mail" name="email" id="email"  placeholder="Email"/>
+<input type="email" name="email" id="email"  placeholder="Email" required/>
 <label><strong>Confirm email adress</strong></label>
-<input type="mail" name="emailc" id="emailc" placeholder="Confirm Email"/>
+<input type="email" name="emailc" id="emailc" placeholder="Confirm Email" required/>
 <label><strong>Password</strong></label>
-<input type="password" name="pass" id="pass" placeholder="Password"/>
+<input type="password" name="pass" id="pass" placeholder="Password" required/>
 <label><strong>Confirm Password</strong></label>
-<input type="password" name="passc" id="passc" placeholder="Confirm Password"/>
+<input type="password" name="passc" id="passc" placeholder="Confirm Password"required/>
 </div>
 <div>
 <button>Sign Up</button>
@@ -33,6 +33,8 @@
 
 </div>
 </form>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase.js"></script>
+<script src ="./initialize_fb.js"></script>
 <script src ="./signup.js">
 </script>
 </body>

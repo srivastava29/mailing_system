@@ -1,12 +1,17 @@
+ #hi
+ {
+ position:fixed;
+ left:1270px;
+ top:10px;
+ 
+ }
  .mail
 	 {
 	 flex: 1;
 	 display:inline-block;
-	 
 	 height:auto;
 	 width:auto;
 	 background-color: white;
-	 
 	 }
 	 .mailbtn
 	 {
@@ -28,8 +33,7 @@
 	.mailcontainer
 	{
 	display: flex;
-	
-	
+	left:500px;
 	}
 	#content_container
 	{
@@ -40,7 +44,6 @@
 	display:inline-block;
 	
 	}
-	
 #inbox:hover
 {
 background-color: #CCFF99;

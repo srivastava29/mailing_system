@@ -2,21 +2,32 @@
 <html>
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-5"/> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src ="./mail.js"></script>
+
 <link href="./mail.css" rel="stylesheet">
 </head>
 
 <body style="">
-<div class= "mailcontainer">
+<div class= "mailcontainer" id="mailcontain">
+<div id="hi">
+<h4></h4>
+</div>
 <div class="mail">
 <div class="mailbtn" id="inbox">Inbox</div>
 <div class="mailbtn" id="compose">Compose</div>
 <div class="mailbtn" id="draft">Draft</div>
 <div class="mailbtn" id="sent">Sent</div>
+<div class="mailbtn" id="logout">LogOut</div>
 </div>
 <div id="content_container"></div>
+<div id="preview_container"></div>
 </div>
-
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase.js"></script>
+<script src ="/initialize_fb.js"></script>
+<script src ="./compose.js"></script>
+<script src ="./sent.js"></script>
+<script src ="./draft.js"></script>
+<script src ="./inbox.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src ="./mail.js"></script>
 </body>
 </html>

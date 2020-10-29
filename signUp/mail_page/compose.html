@@ -7,25 +7,26 @@
 <link href="./compose.css" rel="stylesheet">
 </head>
 <body>
+<form name="myForm" id ="formid_compose" method="post" onSubmit="">
 <div id="btn">
-<button type="submit" onClick="">Send</button>
-<button type="submit" onClick="" id="savebtn">Save</button>
-<button type="submit" onClick="" id="resetbtn">Reset</button>
+<button type="submit" onClick="sent_valid(this.form,this.id) " id="sentbtn">Send</button>
+<button type="submit" onClick="sent_valid(this.form,this.id)" id="savebtn">Save</button>
+<button type="submit" onClick="resetmail()" id="resetbtn">Reset</button>
 </div>
-<form name="myForm" id ="formid" method="post" onSubmit="saveData()">
+
 
 
 <div class="formcontainer">
 
 <div class="container">
 
-<label><strong>To</strong></label> <input type="text" name="fname" id="fname" />
-<label> <strong>From </strong></label> <input type="text" name="lname" id="lname" />
-<label><strong>CC</strong></label> <input type="text" name="email" id="email"  />
-<label><strong>BCC</strong></label>
-<input type="text" name="emailc"/>
+<label><strong>To</strong></label> <input type="text" name="to" id="fname"  />
+<label> <strong>From </strong></label> <input type="text" name="from" id="lname" readonly />
+<label><strong>CC</strong></label> <input type="text" name="cc" id="email"  />
+<label><strong>Subject</strong></label>
+<input type="text" name="sub"/>
 <label></label>
-<textarea id="txtarea" name="txt_" rows="25" cols="100">
+<textarea id="txtarea" name="txt_area" rows="25" cols="100">
 
 </textarea>
 
@@ -35,5 +36,10 @@
 </div>
 
 </form>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase.js"></script>
+<script src ="/initialize_fb.js"></script>
+<script src ="./compose.js"></script>
+<script src ="./inbox.js"></script>
+<script src ="./valid_mail.js"></script>
 </body>
 </html>
